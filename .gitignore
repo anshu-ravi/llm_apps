@@ -1,2 +1,12 @@
 # Skip .env files
 .env 
+
+__pycache__/
+*.py[cod]
+
+# Ignore mypy cache
+.mypy_cache/
+
+# Ignore pytest cache
+pytest_cache/
+

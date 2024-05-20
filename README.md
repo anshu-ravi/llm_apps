@@ -52,5 +52,33 @@ streamlit run blog-generator/app.py
 ```
 
 
+### Application 2: AI Voice Assistant 
+
+The AI assistant is designed to interact with users through speech, leveraging OpenAI, SpeechRecognition, and Eleven Labs APIs to create a seamless conversational experience
+
+Features
+1. Speech Input: Captures and recognizes user speech using the SpeechRecognition library.
+2. Natural Language Processing: Processes user input with GPT-3.5 Turbo via LangChain.
+3. Conversational Memory: Maintains context across the conversation with ConversationBufferMemory.
+4. Audio Response: Converts text responses to speech using the Eleven Labs library.
+5. Continuous Interaction: Engages in a continuous conversation until the user says "quit" or "exit".
+
+Key Components
+1. SpeechRecognition: This library detects and captures audio input from the user, ensuring the assistant can listen and respond accurately.
+2. LangChain Agent: A GPT-3.5 Turbo model acts as the language model, initialized with `CHAT_CONVERSATIONAL_REACT_DESCRIPTION` to handle conversational logic.
+3. ConversationBufferMemory: This component allows the assistant to remember previous interactions, providing coherent and contextually appropriate responses.
+4. Eleven Labs: This library converts text responses from the AI into natural-sounding audio output.
+
+```
+cd voice-assistant
+conda activate llm
+pip install -r requirements.txt
+python3 app.py
+```
 
 
+For WSL users, you might have to install the following tools to use the libraries mentioned
+```
+sudo apt install portaudio19-dev # for input audio
+sudo apt install ffmpeg # for output audio
+```

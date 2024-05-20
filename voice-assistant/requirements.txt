@@ -1,0 +1,7 @@
+PyAudio==0.2.14
+langchain==0.1.17 
+openai==1.26.0
+python-dotenv==1.0.1
+SpeechRecognition==3.10.4
+elevenlabs==1.2.2
+google-api-python-client==2.129.0

@@ -9,3 +9,10 @@ unstructured==0.14.0
 jq==1.7.0
 tqdm==4.66.4
 tiktoken==0.7.0
+faiss-cpu==1.8.0
+pinecone-client==4.1.0
+newsapi-python==0.2.7
+SpeechRecognition==3.10.4
+elevenlabs==1.2.2
+google-api-python-client==2.129.0
+PyAudio==0.2.14

@@ -12,3 +12,6 @@ pytest_cache/
 
 
 *.json
+
+# Ignore pdf files
+*.pdf

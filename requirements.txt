@@ -16,3 +16,4 @@ SpeechRecognition==3.10.4
 elevenlabs==1.2.2
 google-api-python-client==2.129.0
 PyAudio==0.2.14
+PyPDF2==3.0.1

@@ -82,3 +82,31 @@ For WSL users, you might have to install the following tools to use the librarie
 sudo apt install portaudio19-dev # for input audio
 sudo apt install ffmpeg # for output audio
 ```
+
+### Application 3: Podcast Generator
+
+This Podcast Generator is a web application that allows users to upload a PDF, select an audience type, and choose a language model (GPT-3.5 Turbo or GPT-4 Turbo) to generate a short, quick podcast. The application utilizes various AI and NLP tools to process the PDF, summarize its content, create a dialogue script, and convert the script to audio.
+
+Features
+1. PDF Upload: Users can upload a PDF document.
+2. Audience Selection: Users can select the type of audience ('General', 'Technical', 'Beginner').
+3. Model Selection: Users can choose between GPT-3.5 Turbo and GPT-4 Turbo for generating content.
+4. Content Processing: The PDF is split into chunks and summarized using the map-reduce method.
+5. Dialogue Generation: The summarized content is converted into a two-person dialogue script.
+6. Audio Generation: The dialogue script is converted into audio using the Eleven Labs API.
+
+How It Works?
+1. PDF Processing: The uploaded PDF is read and split into manageable chunks using PyPDF2.
+2. Content Summarization: 
+    - The text chunks are summarized using the map-reduce method with Langchain and OpenAI models.
+    - Custom prompts ensure the summaries are tailored to the selected audience.
+3. Dialogue Generation:The summarized content is passed to another OpenAI model to generate a two-person dialogue script.
+4. Audio Generation: The dialogue script is converted to audio using the Eleven Labs API.
+
+
+```
+cd podcast-generator
+conda activate llm
+pip install -r requirements.txt
+python3 src/app.py
+```
